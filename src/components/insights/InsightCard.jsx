@@ -14,7 +14,7 @@ const InsightCard = ({ insightObject }) => {
         <Link href={`/insights/${insightObject.slug}`}>
           <div
             className="thumbnail"
-            style={{ backgroundImage: `url(${urlFor(insightObject.image).url()}` }}
+            style={{ backgroundImage: `url(${urlFor(insightObject.image).url()})` }}
           ></div>
           <div className="info">
             <h3>{insightObject.title}</h3>
