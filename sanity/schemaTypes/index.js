@@ -1,3 +1,4 @@
 import insights from "./insights";
+import legalPages from "./legalPages";
 
-export const schemaTypes = [insights]
+export const schemaTypes = [insights, legalPages]
