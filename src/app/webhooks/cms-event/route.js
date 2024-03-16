@@ -6,7 +6,7 @@ export async function POST(request) {
     console.log('payload:', payload);
     if(payload) {
         revalidateTag(CACHE_TAG_REVIEWS);
-        console.log('Tag revalidated');
+        console.log(`${CACHE_TAG_REVIEWS} tag revalidated`);
     }
     return new Response(null, { status: 204 })
 }
