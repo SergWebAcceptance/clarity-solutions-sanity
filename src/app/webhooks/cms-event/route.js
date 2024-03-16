@@ -4,7 +4,7 @@ import { revalidateTag } from "next/cache";
 export async function POST(request) {
     const payload = await request.json();
     console.log('payload:', payload);
-    if(payload_type == 'insights') {
+    if(payload._type == 'insights') {
         revalidateTag(CACHE_TAG_REVIEWS);
         console.log('Tag revalidated');
     }
