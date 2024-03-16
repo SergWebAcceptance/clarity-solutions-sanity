@@ -1,5 +1,7 @@
+'use client';
 import { getInsights } from "@/lib/insights";
 import InsightCard from "./InsightCard";
+import { useState, useEffect } from "react";
 
 export default async function InsightsSecond() {
   const [insights, setInsights] = useState([]);
