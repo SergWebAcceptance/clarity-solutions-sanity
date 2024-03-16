@@ -1,8 +1,19 @@
+'use client';
 import { getInsights } from "@/lib/insights";
 import InsightCard from "./InsightCard";
+import React, { useEffect, useState } from 'react';
 
-export default async function InsightsSecond() {
-  const insights = await getInsights();
+export default function InsightsSecond() {
+  const [insights, setInsights] = useState([]);
+
+  useEffect(() => {
+    async function fetchInsights() {
+      const fetchedInsights = await getInsights();
+      setInsights(fetchedInsights);
+    }
+
+    fetchInsights();
+  }, []);
   return (
     <>
       <section className="insights-wrap">
