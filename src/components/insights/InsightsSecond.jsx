@@ -2,7 +2,16 @@ import { getInsights } from "@/lib/insights";
 import InsightCard from "./InsightCard";
 
 export default async function InsightsSecond() {
-  const insights = await getInsights();
+  const [insights, setInsights] = useState([]);
+
+  useEffect(() => {
+    async function fetchInsights() {
+      const fetchedInsights = await getInsights();
+      setInsights(fetchedInsights);
+    }
+
+    fetchInsights();
+  }, []);
   return (
     <>
       <section className="insights-wrap">
