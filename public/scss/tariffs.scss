@@ -1,0 +1,185 @@
+.tariffs-hero{
+    
+    background-color: #F85C3A;
+    background-image: url(/images/tariffs/hero-back.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    position: relative;
+    overflow: hidden;
+    >div{
+        display: flex;
+    }
+    &__body{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        >div{
+            display: flex;
+        }
+        img{
+            width: 580px;
+        }
+        @media (max-width:992px){
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+            padding-top: 80px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    h1{
+        color: var(--5, #FFF);
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+        margin: 0 0 24px 0;
+        @media (max-width:992px){
+            
+            text-align: center;
+        }
+    }
+
+    .parallax{
+        position: relative;
+        bottom: 0;
+        right: 0;
+        width: 590px;
+        height: 220px;
+        background-image: url(/images/tariffs/hero-parallax.png);
+        background-position: bottom center;
+        background-size: 400px;
+        background-repeat: no-repeat;
+        @media (max-width:992px){
+            display: none;
+        }
+        .circle1{
+            top: 60%;
+            left: 0%;
+            position: absolute;
+            img{
+                width: 25px;
+            }
+        }
+        .circle2{
+            top: 20%;
+            left: 25%;
+            position: absolute;
+            
+            img{
+                width: 30px;
+            }
+        }
+        .circle3{
+            top: 10%;
+            right: 0%;
+            position: absolute;
+            img{
+                width: 40px;
+            }
+        }
+        .circle4{
+            bottom:-7%;
+            right: 0%;
+            position: absolute;
+            img{
+                width: 75px;
+            }
+        }
+    }
+
+}
+
+.tariffs-second{
+    padding: 80px 0;
+    &__body{
+        border-radius: 40px;
+        background: var(--5, #FFF);
+        padding: 80px 85px;
+        @media (max-width:992px){
+            padding: 40px 24px;
+            overflow-x: auto;
+        }
+    }
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        @media (max-width:992px){
+            width: 1200px;
+        }
+        thead{
+            th{
+                padding: 16px 0;
+                color: var(--2, #282828);
+                text-align: left;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 120%;
+                width: 25%;
+            }
+        }
+        tbody{
+            tr{
+                &:last-child{
+                    td{
+                        padding: 32px 0 0 0;
+                        border: none;
+                    }
+                }
+                td{
+                    padding: 8px 8px 8px 0;
+                    text-align: left;
+                    color: var(--3, #484848);
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+                    span{
+                        color: #F85C3A;
+                    }
+                    &.subtitle{
+                        background: var(--1, #F85C3A);
+                        padding: 16px;
+                        color: var(--5, #FFF);
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 120%;
+                        text-align: center;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .need-help{
+        padding: 80px 15px;
+        background-color: #F85C3A;
+        background-image: url(/images/tariffs/help-back.svg);
+        background-position: center;
+        background-size: cover;
+        border-radius: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:48px;
+        margin-top: 80px;
+        h2{
+            color: var(--4, #F6F6F6);
+            text-align: center;
+            margin: 0;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120%; /* 57.6px */
+        }
+    }
+
+}
